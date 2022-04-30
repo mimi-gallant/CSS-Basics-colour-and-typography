@@ -1,0 +1,151 @@
+/*
+embeded fonts from Google fonts into the website's CSS so they can be used.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fredoka+One&display=swap");
+
+body {
+  /*
+  Changed the line height to 250%, because I felt like 140% (as it said in the powerpoint) just didnt cut it. 
+  */
+  line-height: 250%;
+  color: rgb(34, 34, 34);
+  /*
+  The background in the very back is gray, so the white sections layer over it nicely to create a hiearchy.
+  */
+  background-color: #cdcccf;
+  padding: 10px;
+}
+
+header {
+  font-family: "Fredoka One", "Arial Rounded MT", "Calibri", sans-serif;
+  color: rgb(240, 240, 240);
+  /*
+  So the menu at the top follows your scrolling down...
+  */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  line-height: 100%;
+  padding: -1000px;
+  z-index: 2000;
+  /*
+  A shadow to help layer the nav bar on top of everything
+  */
+  box-shadow: 1.5px 3px 5px rgba(0, 0, 0, 0.226);
+  margin-left: -20px;
+  margin-top: -30px;
+}
+.sections {
+  padding: 25px;
+  margin: 10px;
+  margin-top: 20px;
+  background-color: rgb(238, 238, 238);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(185, 185, 185);
+  border-radius: 7px;
+  box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
+  text-align: center;
+}
+
+.background-image {
+  margin-top: 100px;
+}
+
+.button {
+  color: rgb(74, 27, 218);
+  background-color: rgb(37, 9, 121);
+  padding: 15px;
+  border: solid;
+  border-width: 5px;
+  border-color: rgb(132, 91, 255);
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: rgb(132, 91, 255);
+  color: rgb(200, 181, 255);
+}
+
+.nav-link li {
+  font-size: 24px;
+  display: inline-block;
+  margin: 1px;
+  /*
+  This is white but it has a lower opacity
+   */
+  background-color: #ffffffad;
+  font-family: "Asap", Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #3138af;
+  padding: 15px;
+}
+
+header {
+  text-align: center;
+  /*I thought it would be fun to add a gradient nav bar
+        from: https://www.w3schools.com/css/css3_gradients.asp*/
+  background-image: linear-gradient(to right, #525bff, #a052ff);
+  padding: 1px;
+}
+
+ul {
+  text-align: left; /*makes exception for any of the links (or pretend links) to be aligned to the left */
+}
+
+#navigation {
+  font-size: 25px;
+}
+
+#top-of-page {
+  font-size: 104px;
+  position: relative;
+  display: inline;
+  font-family: "Courier Prime", Courier, monospace, serif;
+}
+
+.text-over-image {
+  text-align: center;
+  position: relative;
+  top: -500px;
+  color: white;
+  font-size: 40px;
+}
+.p-over-image {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  top: -500px;
+  color: white;
+}
+.background-image {
+  border: 1px solid;
+  border-color: rgb(0, 0, 0);
+  filter: brightness(40%);
+  border-radius: 5px;
+  position: relative;
+}
+
+h1 {
+  /*
+  I would make the font size a bit smaller for the title when you scroll down, as it becomes less important but apparently that involves JavaScript.
+  */
+  font-size: 72px;
+  position: relative;
+  line-height: 100%;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+p {
+  font-size: 24px;
+  font-family: "Asap", Arial, Helvetica, sans-serif;
+}
+
+.nav-link li:hover {
+  background-color: rgb(238, 238, 238);
+  font-size: 25px;
+  text-decoration: underline;
+}

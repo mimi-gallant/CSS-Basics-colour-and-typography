@@ -1,0 +1,181 @@
+<!--Name: Myriam
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
+  School: PTEC
+  Date Last Modified: April 29th, 2022
+-->
+<!--Check external stylesheet (stylesheets/css-pages-style.css) for some of the styling for this page.-->
+
+<!--Colour Physchology of Purple
+- Power; everyone who goes to PTEC knows how good it is!
+
+- Creativity; a lot of what happens in PTEC revolves around creativity.
+
+- Ambition; Google Dictionary definition: "a strong desire to do or to achieve something, typically requiring determination and hard work."
+  It takes a lot of determination and hard work to be a student, especially at PTEC.
+
+- Also, the PTEC logo is purple so I just thought it would suit its website nicely.
+ However, I made it a brighter purple on purpose because the darker shade makes it seem more mysterious,
+ and I don't think that's what a school should be. To make up for it, I added a little hint of 
+ blue so it's almost like it slightly calms down the purple, doesn't make it seem as loud.
+
+
+ The website was given a light theme because this page has more text than it does images.
+
+colours were chosen using the analogus colour wheel. Some colours have lighter/darker variants 
+(found with monochromatic) to improve the readability of the font.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTEC | What We Do</title>
+    <link rel="stylesheet" href="stylesheets/css-pages-style.css" />
+
+    <style>
+      /* 
+      Importing Google fonts to embed into code. Makes the website look a bit nicer, but not the end of the world if it is unsupported. 
+      Just for decoration, doesnt add functionality to the website. The font is called "Asap"
+      */
+      @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fredoka+One&display=swap");
+      h2 {
+        /* 
+        I thought the "Fredoka One" font looked good for a title font for the website, as
+        it was categorized as a "display" font, PLUS it looks a lot like the font used
+        in the PTEC logo.
+        */
+        font-family: "Fredoka One", "Arial Rounded MT", "Calibri", sans-serif;
+        color: rgb(36, 36, 36);
+        font-size: 64px;
+        text-align: center;
+      }
+      h3 {
+        /* 
+        The "Courier Prime" font looks similar to the font that is used in code,
+        and it also has serifs in it, which I thought could be added somewhere to make the 
+        website feel a teensy bit more trustworthy, considering the "useful for
+        students to know" subheading is written using this font. Anytime 
+        I see a moospace font, it reminds me of code, packet tracers and computer science
+        in general.
+        It makes sense to use it here because it's a tech school.
+        This font is used for subheadings.
+        */
+        font-family: "Courier Prime", "Courier New", Courier, monospace, serif;
+        font-size: 40px;
+        color: #525bff;
+      }
+      h4 {
+        /*
+        The "Asap" font looks very cutting edge, but is not a display font and is good for just
+        plain text. This font is used for paragraph text.
+        */
+        font-family: "Asap", "Calibri", sans-serif;
+        font-size: 24px;
+        font-weight: bolder;
+        /*
+        Emphasis for this plain text, so it's a bright, not difficult-to-read colour!
+        */
+        color: #8103ff;
+      }
+      p {
+        /* 
+        I thought that purple/dark blue paragraph text looked weird and difficult to read, so I changed it to an off-black.
+        */
+        color: rgb(36, 36, 36);
+      }
+      #bottom-of-page {
+        border-radius: 0px;
+        font-family: "Asap", "Calibri", sans-serif;
+        font-weight: bolder;
+        font-size: 16px;
+        margin-bottom: -150px;
+        margin-top: 50px;
+        padding: 1px;
+        width: 109%;
+        text-align: center;
+        z-index: 1000;
+        margin-left: -100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Pembina Trails Early College</h1>
+      <nav>
+        <ul id="navigation" class="nav-link">
+          <a href="index.html"><li>Homepage</li></a>
+          <a class="nav-link" href="what-we-do.html"><li>What We Do</li></a>
+          <a class="nav-link" href="index.html"><li>Clubs</li></a>
+          <!--href=nonexistent-->
+          <!--target, so twitter opens in another tab so the website stays open and isn't as easily forgotten about.-->
+          <a
+            href="https://twitter.com/ptecwinnipeg"
+            target="_blank"
+            class="nav-link"
+            ><li>The PTEC Twitter</li></a
+          >
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sections" style="padding: 0px">
+      <h2 style="margin-top: 300px; color: #525bff; position: relative">
+        What We Do
+      </h2>
+      <h3 style="text-align: center; color: #8103ff">
+        (Useful for students to know)
+      </h3>
+    </div>
+
+    <div class="sections">
+      <h3>Software Development</h3>
+      <h4>Grades 9 and 10</h4>
+      <p>
+        In grade 9, the course is focused on game development with Unity and
+        Visual Studio. In grade 10, the course is focused on web development.
+        Programming languages learned include but are not limited to C#, Python,
+        HTML, CSS and maybe JavaScript.
+      </p>
+    </div>
+
+    <div class="sections">
+      <h3>Networking Essentials</h3>
+      <h4>Grade 9</h4>
+      <p>
+        A course taken in grade 9 where you learn about building a simple
+        network, and how the many different types of networks work.
+      </p>
+    </div>
+
+    <div class="sections">
+      <h3>Cybersecurity Essentials</h3>
+      <h4>Grade 10</h4>
+      <p>
+        This is an online course, meaning there is no in-class instruction, with
+        the exception of writing quizzes, tests and the final exam. You learn
+        about the many different situations that have happened with the security
+        of computers and networks. You also learn about how to prevent
+        cybersecurity issues from happening in your life, and how to deal with
+        them.
+      </p>
+    </div>
+
+    <div class="sections">
+      <h3>IT Essentials</h3>
+      <h4>Grade 10</h4>
+      <p>
+        This course is about building, and fixing many different types of PCs
+        (computers). Upon completing this course, you will be proficient at
+        troubleshooting a wide variety of problems that could arise when working
+        with a computer.
+      </p>
+    </div>
+    <div class="sections" id="bottom-of-page">
+      <p>Website made by Myriam Gallant 2022</p>
+    </div>
+  </body>
+</html>
