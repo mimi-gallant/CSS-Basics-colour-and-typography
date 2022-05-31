@@ -39,7 +39,7 @@ header {
 }
 
 .sections {
-  padding: 25px;
+  padding: 10px;
   margin: 10px;
   margin-top: 20px;
   background-color: rgb(238, 238, 238);
@@ -183,9 +183,44 @@ p {
 h2 {
   font-family: "Courier Prime", "Courier New", Courier, monospace, sans-serif;
   font-size: 44px;
-  text-align: center;
+  text-align: left;
+  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  float: bottom;
 }
 
 nav {
   position: sticky;
+}
+
+.games-club {
+  position: inline;
+  margin-top: 0px;
+  display: table;
+  float: top;
+  margin: 50px;
+}
+
+.text {
+  display: inline-block;
+  white-space: pre-line;
+  text-align: left;
+  overflow: wrap;
+  float: left;
+  margin: 50px;
+  margin-top: -75px;
+  margin-bottom: 75px;
+}
+
+footer {
+  background-image: linear-gradient(to right, #525bff, #a052ff);
+  margin: 10px;
+  padding: 10px;
+  margin-bottom: -150px;
+  z-index: 500;
+  color: aliceblue;
+  text-align: center;
+  margin-left: -18px;
+  margin-right: -18px;
 }
