@@ -65,25 +65,23 @@ header {
   border-radius: 20px;
 }
 
-.button:hover {
-  background-color: rgb(132, 91, 255);
-  color: rgb(200, 181, 255);
-}
-
 .nav-link li {
+  position: relative;
   font-size: 24px;
   display: inline-block;
-  margin: 1px;
-  /*
-  This is white but it has a lower opacity
-   */
-  background-color: #ffffffad;
   font-family: "Asap", Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  color: #3138af;
+  font-weight: thin;
+  color: aliceblue;
   padding: 15px;
-  transition: font-size cubic-bezier(0.5, 1, 1), background-color ease-in-out;
-  transition-duration: 0.5s;
+  padding-bottom: 20px;
+  border: aliceblue 1px solid;
+  border-radius: 1px;
+}
+
+.nav-link a :hover {
+  border-bottom-width: 10px;
+  padding-bottom: 10px;
+  transition: all ease-out 0.2s;
 }
 
 header {
@@ -138,7 +136,7 @@ h1 {
   /*
   I would make the font size a bit smaller for the title when you scroll down, as it becomes less important but apparently that involves JavaScript.
   */
-  font-size: 25px;
+  font-size: 44px;
   position: relative;
   line-height: 100%;
   letter-spacing: 1px;
@@ -149,38 +147,9 @@ h1 {
   top: -20px;
 }
 
-h1:hover {
-  padding: 20px;
-  font-size: 72px;
-  transition: font-size 0.5s ease-out;
-}
-
-/* It looked nice going in, now i didnt want to make it choppy on the way out */
-h1:hover {
-  font-size: 72px;
-  transition: font-size 0.5s ease-out;
-}
-h1 :not(:hover) {
-  padding: none;
-  font-size: 44px;
-  transition: font-size 2s ease-in-out;
-}
-
-header:hover {
-  transition: top 2s ease-in-out;
-  transition: padding 0.5s ease-in-out;
-  transition: padding 2s ease-out;
-}
-
 p {
   font-size: 24px;
   font-family: "Asap", Arial, Helvetica, sans-serif;
-}
-
-.nav-link li:hover {
-  background-color: rgb(238, 238, 238);
-  font-size: 25px;
-  text-decoration: underline;
 }
 
 h2 {
