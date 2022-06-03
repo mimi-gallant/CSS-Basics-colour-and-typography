@@ -36,6 +36,7 @@ header {
   box-shadow: 1.5px 3px 5px rgba(0, 0, 0, 0.226);
   margin-left: 0px;
   margin-top: 0px;
+  display: flex;
 }
 
 .sections {
@@ -66,22 +67,35 @@ header {
 }
 
 .nav-link li {
-  position: relative;
   font-size: 24px;
   display: inline-block;
   font-family: "Asap", Arial, Helvetica, sans-serif;
   font-weight: thin;
   color: aliceblue;
+  padding: 10px;
+  padding-bottom: 10px;
+  border: aliceblue 1px solid;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.nav-link a :hover {
+  border-bottom: aliceblue 10px solid;
+  border-left: aliceblue 10px solid;
+  border-bottom-width: 10px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  transition: all ease-out 0.3s;
+  margin: 10px;
+}
+
+.nav-link li :not(:hover) {
+  color: aliceblue;
   padding: 15px;
   padding-bottom: 20px;
   border: aliceblue 1px solid;
   border-radius: 1px;
-}
-
-.nav-link a :hover {
-  border-bottom-width: 10px;
-  padding-bottom: 10px;
-  transition: all ease-out 0.2s;
+  transition: all ease 5s;
 }
 
 header {
@@ -137,7 +151,8 @@ h1 {
   I would make the font size a bit smaller for the title when you scroll down, as it becomes less important but apparently that involves JavaScript.
   */
   font-size: 44px;
-  position: relative;
+  position: flex;
+  flex-direction: row;
   line-height: 100%;
   letter-spacing: 1px;
   font-weight: lighter;
