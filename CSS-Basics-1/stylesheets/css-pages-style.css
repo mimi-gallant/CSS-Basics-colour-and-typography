@@ -4,6 +4,10 @@ embeded fonts from Google fonts into the website's CSS so they can be used.
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fredoka+One&display=swap");
 
+html {
+  line-height: 250%;
+}
+
 body {
   /*
   Changed the line height to 250%, because I felt like 140% (as it said in the powerpoint) just didnt cut it. 
@@ -221,4 +225,77 @@ footer {
   text-align: center;
   margin-left: -18px;
   margin-right: -18px;
+}
+.cyberpatriot h2 {
+  text-align: left;
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.cyberpatriot #under-title-cyber {
+  display: flex;
+  flex-direction: row;
+  align-self: space-around;
+}
+
+#cyberpatriot-text {
+  text-align: left;
+  margin-left: 20px;
+}
+
+#cyberpatriot-logo {
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 30%;
+  align-self: center;
+}
+
+#cyberpatriot-logo img {
+  max-width: 100%;
+  flex-wrap: wrap;
+  min-width: 25%;
+}
+/* ................ */
+
+.esports h2 {
+  text-align: left;
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.esports #under-title-esports {
+  display: flex;
+  flex-direction: row;
+  align-self: space-around;
+}
+
+.esports #text-esports {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.esports #rocket-league {
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 30%;
+  align-self: center;
+}
+
+.esports #rocket-league img {
+  max-width: 100%;
+  flex-wrap: wrap;
+  min-width: 25%;
+}
+/* from https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex.
+basically saying if the screen is under 800px wide (ex: on mobile phone), the flex direction will change to column, since it is otherwise set to row. I tried making the image get smaller as the window shrunk, but that looked TERRIBLE! */
+@media screen and (max-width: 800px) {
+  .cyberpatriot #under-title-cyber {
+    flex-direction: column;
+  }
+
+  .esports #under-title-esports {
+    flex-direction: column-reverse;
+  }
 }
