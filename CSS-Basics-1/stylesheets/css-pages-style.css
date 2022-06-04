@@ -44,7 +44,7 @@ header {
 }
 
 .sections {
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
   margin-top: 20px;
   background-color: rgb(238, 238, 238);
@@ -71,16 +71,18 @@ header {
 }
 
 .nav-link li {
-  font-size: 24px;
-  display: inline-block;
+  font-size: 21px;
   font-family: "Asap", Arial, Helvetica, sans-serif;
   font-weight: thin;
   color: aliceblue;
-  padding: 10px;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  padding-top: 10px;
   padding-bottom: 10px;
   border: aliceblue 1px solid;
   border-radius: 5px;
-  margin: 5px;
+  margin: 2px;
+  float: right;
 }
 
 .nav-link a :hover {
@@ -99,7 +101,7 @@ header {
   padding-bottom: 20px;
   border: aliceblue 1px solid;
   border-radius: 1px;
-  transition: all ease 5s;
+  transition: padding border ease-in-out 5s;
 }
 
 header {
@@ -154,16 +156,14 @@ h1 {
   /*
   I would make the font size a bit smaller for the title when you scroll down, as it becomes less important but apparently that involves JavaScript.
   */
+  text-align: left;
   font-size: 44px;
-  position: flex;
-  flex-direction: row;
-  line-height: 100%;
-  letter-spacing: 1px;
   font-weight: lighter;
-  background-color: rgba(255, 255, 255, 0);
-  padding: 50px;
-  padding-bottom: 0px;
-  top: -20px;
+  letter-spacing: 1px;
+  line-height: 100%;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 p {
@@ -181,16 +181,10 @@ h2 {
   float: bottom;
 }
 
-nav {
-  position: sticky;
-}
+nav ul {
+  display: flex;
 
-.games-club {
-  position: inline;
-  margin-top: 0px;
-  display: table;
-  float: top;
-  margin: 20px;
+  list-style: none;
 }
 
 .text {
@@ -256,7 +250,7 @@ footer {
   flex-wrap: wrap;
   min-width: 25%;
 }
-/* ................ */
+/* ESPORTS SECTION */
 
 .esports h2 {
   text-align: left;
@@ -288,6 +282,74 @@ footer {
   flex-wrap: wrap;
   min-width: 25%;
 }
+
+/* GAMES CLUB SECTION */
+
+.gamesclub h2 {
+  text-align: left;
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.gamesclub #under-title-gamesclub {
+  display: flex;
+  flex-direction: row;
+  align-self: space-around;
+}
+
+.gamesclub #text-gamesclub {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.gamesclub #mk8d-ssbu {
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 30%;
+  align-self: center;
+}
+
+.gamesclub #mk8d-ssbu img {
+  max-width: 100%;
+  flex-wrap: wrap;
+  min-width: 25%;
+}
+
+/* PHOTOGRAPHY CLUB SECTION */
+
+.photography h2 {
+  text-align: left;
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.photography #under-title-photography {
+  display: flex;
+  flex-direction: row;
+  align-self: space-around;
+}
+
+.photography #text-photography {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.photography #squirrel-chickadee {
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 30%;
+  align-self: center;
+}
+
+.photography #squirrel-chickadee img {
+  max-width: 100%;
+  flex-wrap: wrap;
+  min-width: 25%;
+}
+
+/* SCREEN RESIZING PURPOSES */
 /* from https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex.
 basically saying if the screen is under 800px wide (ex: on mobile phone), the flex direction will change to column, since it is otherwise set to row. I tried making the image get smaller as the window shrunk, but that looked TERRIBLE! */
 @media screen and (max-width: 800px) {
@@ -296,6 +358,14 @@ basically saying if the screen is under 800px wide (ex: on mobile phone), the fl
   }
 
   .esports #under-title-esports {
+    flex-direction: column-reverse;
+  }
+
+  .gamesclub #under-title-gamesclub {
+    flex-direction: column;
+  }
+
+  .photography #under-title-photography {
     flex-direction: column-reverse;
   }
 }
