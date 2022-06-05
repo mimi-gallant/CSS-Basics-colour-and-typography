@@ -24,11 +24,7 @@ body {
 header {
   font-family: "Fredoka One", "Arial Rounded MT", "Calibri", sans-serif;
   color: rgb(240, 240, 240);
-  /*
-  So the menu at the top follows your scrolling down...
-  */
-  overflow: hidden;
-  position: sticky;
+  position: fixed;
   top: -1;
   width: 100%;
   line-height: 100%;
@@ -37,9 +33,15 @@ header {
   /*
   A shadow to help layer the nav bar on top of everything
   */
+  -webkit-box-shadow: 1.5px 3px 5px rgba(0, 0, 0, 0.226);
+  -moz-box-shadow: 1.5px 3px 5px rgba(0, 0, 0, 0.226);
   box-shadow: 1.5px 3px 5px rgba(0, 0, 0, 0.226);
   margin-left: 0px;
   margin-top: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -51,7 +53,11 @@ header {
   border: solid;
   border-width: 1px;
   border-color: rgb(185, 185, 185);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
   border-radius: 7px;
+  -webkit-box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
+  -moz-box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
   box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
   text-align: center;
 }
@@ -67,6 +73,8 @@ header {
   border: solid;
   border-width: 5px;
   border-color: rgb(132, 91, 255);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   border-radius: 20px;
 }
 
@@ -80,6 +88,8 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   border: aliceblue 1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   margin: 2px;
   float: right;
@@ -91,6 +101,9 @@ header {
   border-bottom-width: 10px;
   padding-bottom: 15px;
   padding-left: 10px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   margin: 10px;
 }
@@ -100,7 +113,12 @@ header {
   padding: 15px;
   padding-bottom: 20px;
   border: aliceblue 1px solid;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
   border-radius: 1px;
+  -webkit-transition: padding border ease-in-out 5s;
+  -o-transition: padding border ease-in-out 5s;
+  -moz-transition: padding border ease-in-out 5s;
   transition: padding border ease-in-out 5s;
 }
 
@@ -108,8 +126,13 @@ header {
   text-align: center;
   /*I thought it would be fun to add a gradient nav bar
         from: https://www.w3schools.com/css/css3_gradients.asp*/
+  background-image: -webkit-linear-gradient(left top,right top,(#525bff), (#a052ff));
+  background-image: -webkit-linear-gradient(left, #525bff, #a052ff);
+  background-image: -moz-linear-gradient(left, #525bff, #a052ff);
+  background-image: -o-linear-gradient(left, #525bff, #a052ff);
   background-image: linear-gradient(to right, #525bff, #a052ff);
   padding: 1px;
+  position: -webkit-sticky;
   position: sticky;
   margin: -20px;
   padding-right: 35px;
@@ -147,7 +170,10 @@ ul {
 .background-image {
   border: 1px solid;
   border-color: rgb(0, 0, 0);
+  -webkit-filter: brightness(40%);
   filter: brightness(40%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   position: relative;
 }
@@ -162,7 +188,13 @@ h1 {
   letter-spacing: 1px;
   line-height: 100%;
   margin: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -179,9 +211,32 @@ h2 {
   margin-top: 50px;
   margin-bottom: 0px;
   float: bottom;
+  background-image: -webkit-linear-gradient(linear,left top,right top) color-stop(1%, #525bff), color-stop(20%, #a052ff), to(#00c8ff);
+  background-image: -webkit-linear-gradient(
+    left,
+    #525bff 1%,
+    #a052ff 20%,
+    #00c8ff
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    #525bff 1%,
+    #a052ff 20%,
+    #00c8ff
+  );
+  background-image: -o-linear-gradient(left, #525bff 1%, #a052ff 20%, #00c8ff);
+  background-image: linear-gradient(to right, #525bff 1%, #a052ff 20%, #00c8ff);
+  padding: 20px;
+  /* much like a clipping mask in procreate, but with text and a background colour */
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
 
   list-style: none;
@@ -210,6 +265,16 @@ nav ul {
 }
 
 footer {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#525bff),
+    to(#a052ff)
+  );
+  background-image: -webkit-linear-gradient(left, #525bff, #a052ff);
+  background-image: -moz-linear-gradient(left, #525bff, #a052ff);
+  background-image: -o-linear-gradient(left, #525bff, #a052ff);
   background-image: linear-gradient(to right, #525bff, #a052ff);
   margin: 10px;
   padding: 10px;
@@ -222,14 +287,33 @@ footer {
 }
 .cyberpatriot h2 {
   text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .cyberpatriot #under-title-cyber {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-self: space-around;
+  -ms-flex-item-align: space-around;
+  -ms-grid-row-align: space-around;
   align-self: space-around;
 }
 
@@ -239,14 +323,21 @@ footer {
 }
 
 #cyberpatriot-logo {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 100%;
   min-width: 30%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
 #cyberpatriot-logo img {
   max-width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-width: 25%;
 }
@@ -254,14 +345,33 @@ footer {
 
 .esports h2 {
   text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .esports #under-title-esports {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-self: space-around;
+  -ms-flex-item-align: space-around;
+  -ms-grid-row-align: space-around;
   align-self: space-around;
 }
 
@@ -271,14 +381,21 @@ footer {
 }
 
 .esports #rocket-league {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 100%;
   min-width: 30%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
 .esports #rocket-league img {
   max-width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-width: 25%;
 }
@@ -287,14 +404,33 @@ footer {
 
 .gamesclub h2 {
   text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .gamesclub #under-title-gamesclub {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-self: space-around;
+  -ms-flex-item-align: space-around;
+  -ms-grid-row-align: space-around;
   align-self: space-around;
 }
 
@@ -304,14 +440,21 @@ footer {
 }
 
 .gamesclub #mk8d-ssbu {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 100%;
   min-width: 30%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
 .gamesclub #mk8d-ssbu img {
   max-width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-width: 25%;
 }
@@ -320,14 +463,33 @@ footer {
 
 .photography h2 {
   text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 20px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .photography #under-title-photography {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-self: space-around;
+  -ms-flex-item-align: space-around;
+  -ms-grid-row-align: space-around;
   align-self: space-around;
 }
 
@@ -337,14 +499,21 @@ footer {
 }
 
 .photography #squirrel-chickadee {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 100%;
   min-width: 30%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
 .photography #squirrel-chickadee img {
   max-width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-width: 25%;
 }
@@ -354,18 +523,42 @@ footer {
 basically saying if the screen is under 800px wide (ex: on mobile phone), the flex direction will change to column, since it is otherwise set to row. I tried making the image get smaller as the window shrunk, but that looked TERRIBLE! */
 @media screen and (max-width: 800px) {
   .cyberpatriot #under-title-cyber {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .esports #under-title-esports {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 
   .gamesclub #under-title-gamesclub {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .photography #under-title-photography {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 }
