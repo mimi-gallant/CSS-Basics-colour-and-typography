@@ -1,3 +1,8 @@
+/* PLEASE NOTE
+AutoPrefixer CSS Online was used to check that the correct prefixes were used to ensure browser compatibility!
+https://autoprefixer.github.io/
+*/
+
 /*
 embeded fonts from Google fonts into the website's CSS so they can be used.
 */
@@ -25,6 +30,9 @@ header {
   font-family: "Fredoka One", "Arial Rounded MT", "Calibri", sans-serif;
   color: rgb(240, 240, 240);
   position: fixed;
+  /*
+  Putting the header bar in place
+   */
   top: -1;
   width: 100%;
   line-height: 100%;
@@ -59,14 +67,12 @@ header {
   -webkit-box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
   -moz-box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
   box-shadow: 1.5px 3px 2px rgba(0, 0, 0, 0.226);
-  text-align: center;
-}
-
-.background-image {
-  margin-top: 100px;
 }
 
 .button {
+  left: 45%;
+  vertical-align: center;
+  text-align: center;
   color: rgb(74, 27, 218);
   background-color: rgb(37, 9, 121);
   padding: 15px;

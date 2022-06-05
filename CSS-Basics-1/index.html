@@ -12,12 +12,19 @@ Date Last Modified:
     <link rel="stylesheet" href="stylesheets/css-pages-style.css" />
   </head>
 <style>
+  /* because the homepage was styled a bit differently but still appears consistent */
 .button {
   font-family: "Asap", Arial, Helvetica, sans-serif;
   color: aliceblue;
 }
 .button:hover {
   color: purple;
+  background-color: rgb(132, 91, 255);
+}
+
+.sections-index {
+  background-color: none;
+  margin-bottom: -200px;
 }
 </style>
   <body>
@@ -40,7 +47,7 @@ Date Last Modified:
 
     <main>
       <!--The first section that is about courses at PTEC-->
-      <div class="sections" id="what-we-do">
+      <div class="sections-index" id="what-we-do">
         <img
           class="background-image"
           src="images/computer motherboard.png"
@@ -53,12 +60,12 @@ Date Last Modified:
           Software development, computer parts, cybersecurity and so much more.
         </p>
         <a
-          style="position: relative; top: -300px"
+          style="position: relative; top: -400px;"
           class="button"
-          href="index.html">Learn More</a>
+          href="what-we-do.html">Learn More</a>
       </div>
 
-      <div class="sections" id="clubs">
+      <div class="sections-index" id="clubs">
         <img
           class="background-image"
           style="filter: brightness(50%)"
@@ -72,7 +79,7 @@ Date Last Modified:
         <a
           style="position: relative; top: -300px"
           class="button"
-          href="index.html"
+          href="clubs.html"
           >Learn More</a>
       </div>
     </main>
